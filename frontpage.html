@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rolex</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins',sans-serif;
+            text-decoration: none;
+            list-style: none;
+        }
+        video{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            z-index: -5;
+        }
+        .logo{
+            width: 120px;
+            height: 60px;
+            padding: 8px;
+            cursor: pointer;
+            transform: 0.4s ease;
+            margin-left: 9em;
+            
+        }
+        .logo:hover{
+            transform: scale(1.1);
+        }
+        header{
+            background-color: #00603a9e;
+            backdrop-filter: blur(20px);
+        }
+        .logo-menu{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        nav .logo-menu .menu{
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            gap: 1em;
+            margin-left: -55em;
+            color: white;
+            cursor: pointer;
+        }
+        .menu a{
+            color: white;
+            font-size: 18px;
+            transition: 0.3s ease;
+        }
+        .menu a:hover{
+            color: #00cc7a9e;
+        }
+        #menu-icon{
+            color: white;
+            font-size: 24px;
+            margin-left: -90%;
+            transition: 0.3s ease;
+        }
+        #menu-icon:hover{
+            color: #00cc7a9e;
+        }
+        .search, .search a{
+            color: white;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+            transition: 0.3s ease;
+        }
+        .search:hover, .search a:hover{
+            color: #00cc7a9e;
+        }
+        /* .store, .store a{
+            color: white;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+            transition: 0.3s ease;
+        }
+        .store:hover, .store a:hover{
+            color: #00cc7a9e; */
+        /* } */
+        .favs, .favs a{
+            color: white;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+            transition: 0.3s ease;
+        }
+        .favs:hover, .favs a:hover{
+            color: #00cc7a9e;
+        }
+        nav{
+            padding: 2em 20em;
+            display: flex;
+            gap: 5em;
+            align-items: center;
+            justify-content: space-between;
+        }
+        nav ul{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            gap: 5em;
+            margin-right: -19em;
+        }
+        .info{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 18em;
+        }
+        .info h1{
+            font-size: 87px;
+            color: white;
+            
+        }
+        .info p{
+            color: white;
+            font-size: 38px;
+        }
+        .info button{
+            padding: 10px 30px;
+            border-radius: 100px;
+            color: white;
+            font-size: 24px;
+            border: none;
+            background-color: #00cc7a9e;
+            border: 2px solid #00603a9e;
+            transition: 0.3s ease;
+            opacity: 0.8;
+            margin-top: 1em;
+        }
+        info button:hover{
+            transform: translateY(-5px);
+            opacity: 1;
+        }
+        .sign-up, .sign-up a{
+            color: white;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+            transition: 0.3s ease;
+        }
+        .sign-up:hover, .sign-up a:hover{
+            color: #00cc7a9e;
+        }
+    /* text-align: center;
+    margin-bottom: 4vh;
+} */
+ #share{
+    display: flex;
+    margin: 40px 0;
+    align-items: center;
+ }
+.socialIcons a{
+    position: relative;
+    list-style: none;
+    text-align: center;
+    line-height: 50px;
+    font-size: 27px;
+    text-decoration: none;
+    background-color: #1e211d;
+    color: #b6bbc5;
+    box-shadow:-3px -3px 7px #ffffff73,3px 3px 5px rgba(94, 104, 121, 0.288);
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    padding: .5vw;
+    margin: 0 10px;
+    
+}
+.socialIcons a:hover{
+    color: whitesmoke;
+    background-color: rgb(5, 52, 238);
+    opacity: 100%;
+}
+/*
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 20px;
+*/
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+    gap: 35px;
+    background-color: #cacad173;
+
+}
+
+.grid-item h2 {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.grid-item ul {
+    list-style-type: none;
+    padding: 0;
+    
+}
+
+.grid-item ul li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.grid-item ul li:hover {
+    color: #000;
+}
+
+.logo img {
+    width: 190px;
+    margin-bottom: 50px;
+    margin-left: -118px;
+    margin-top: -70px;
+    
+}
+
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.social-icons li {
+    margin-right: 10px;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+}
+
+.social-icons li:hover {
+    color: #000;
+}
+.copyright{
+    font-size: 2vw;
+    background-color: #000;
+    color: aliceblue;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <video src="./WhatsApp Video 2024-08-10 at 18.46.17_70154fbe.mp4" autoplay muted loop></video>
+        <header>
+            <nav>
+                <div class="logo-menu">
+                   <h1> <img src="./Rolex-Emblem.png" class="logo" alt=""></h1>
+                    <div class="menu">
+                        <i  id="menu-icon" class='bx bx-menu' ></i>
+                        <a href="#">Menu</a>
+                    </div>
+                </div>
+                <ul>
+                    <div class="search">
+                        <i id="search-icon" class='bx bx-search-alt-2'></i>
+                        <a href="#">Search</a>
+                    </div>
+                    <!-- <div class="store">
+                        <i class='bx bx-current-location' ></i>
+                        <a href="#">Store Locater</a>                     -->
+
+                    <!-- </div> -->
+                    <div class="favs">
+                        <i id="fav-icon" class='bx bxs-heart'></i>
+                        <a href="#">Favourites</a>
+                    </div>
+                    <div class="sign-up">
+                        <i class='bx bx-user'></i>
+                        <a href="./login.html">Sign in</a> 
+                    </div>
+
+                </ul>
+            </nav>
+        </header>
+        <section class="info">
+            <p>OYSTER PERPETUAL</p>
+            <h1>COSMOGRAPH DAYTONA</h1>
+            <button>Order Now</button>
+        </section>
+        <br><br>
+    </div>
+    <br><br>
+
+
+
+
+    <div id="share">
+    <section class="socialIcons">
+        <a href="https://www.facebook.com/acoustic.sugar.9/" class="fa fa-facebook"></a>
+        <a href="https://www.facebook.com/acoustic.sugar.9/" class="fa fa-twitter"></a>
+        <a href="https://www.facebook.com/acoustic.sugar.9/" class="fa fa-google"></a>
+        <a href="https://www.facebook.com/acoustic.sugar.9/" class="fa fa-linkedin"></a>
+        <a href="https://www.facebook.com/acoustic.sugar.9/" class="fa fa-youtube"></a>
+        <a href="https://www.instagram.com/acousticallysugar/" class="fa fa-instagram"></a>
+        <a href="https://www.facebook.com/acoustic.sugar.9/" class="fa fa-pinterest"></a>
+        <a href="https://www.facebook.com/acoustic.sugar.9/" class="fa fa-snapchat-ghost"></a>
+        <a href="https://www.facebook.com/acoustic.sugar.9/" class="fa fa-skype"></a>
+    </section>
+    </div>
+    <footer>
+
+    <div class="menu-grid">
+        <div class="logo">
+            <img src="./logo2.png" alt="Rolex Logo">
+        </div>
+        <div class="grid-item">
+            <h2>Rolex watches</h2>
+            <ul>
+                <li>New watches 2024</li>
+                <li>Find your Rolex</li>
+                <li>Configure your Rolex</li>
+                <li>Men's watches</li>
+                <li>Women's watches</li>
+                <li>Gold watches</li>
+            </ul>
+        </div>
+        <div class="grid-item">
+            <h2>The collection</h2>
+            <ul>
+                <li>Air-King</li>
+                <li>Cosmograph</li>
+                <li>Daytona</li>
+                <li>Datejust</li>
+                <li>Lady-Datejust</li>
+                <li>Day-Date</li>
+                <li>Explorer</li>
+                <li>GMT-Master II</li>
+                <li>Oyster Perpetual</li>
+                <li>Sea-Dweller</li>
+                <li>Deepsea</li>
+                <li>Sky-Dweller</li>
+                <li>Submariner</li>
+                <li>Yacht-Master</li>
+                <li>1908</li>
+            </ul>
+        </div>
+        <div class="grid-item">
+            <h2>About Rolex</h2>
+            <ul>
+                <li>Sustainable development</li>
+                <li>Behind the crown</li>
+                <li>History</li>
+            </ul>
+            <h2>Buying a Rolex</h2>
+            <ul>
+                <li>Store locator</li>
+                <li>Buying a Rolex</li>
+                <li>Rolex Certified Pre-Owned</li>
+            </ul>
+        </div>
+        <div class="grid-item">
+            <h2>Care and servicing</h2>
+            <ul>
+                <li>Service Centre locator</li>
+                <li>Watch care and service</li>
+            </ul>
+            <h2>Services</h2>
+            <ul>
+                <li>Frequently asked questions</li>
+                <li>Your favourites</li>
+                <li>File a report</li>
+                <li>Newsroom</li>
+            </ul>
+        </div>
+        <div class="grid-item">
+            <h2>Watchmaking</h2>
+            <ul>
+                <li>At the core of excellence</li>
+                <li>Behind the seal</li>
+                <li>Rolex anatomy</li>
+            </ul>
+        </div>
+        <div class="grid-item">
+            <h2>Rolex and sports</h2>
+            <ul>
+                <li>Tennis</li>
+                <li>Golf</li>
+                <li>Yachting</li>
+                <li>Motor sport</li>
+                <li>Equestrianism</li>
+            </ul>
+        </div>
+        <div class="grid-item">
+            <h2>Perpetual Initiatives</h2>
+            <ul>
+                <li>Perpetual Planet Initiative</li>
+                <li>Perpetual Arts Initiative</li>
+            </ul>
+        </div>
+        <div class="grid-item">
+            <h2>Legal notice</h2>
+            <ul>
+                <li>Terms of use</li>
+                <li>Privacy notice</li>
+                <li>Cookies</li>
+            </ul>
+        </div>
+        <div class="grid-item">
+            <h2>Accessibility</h2>
+            <ul>
+                <li>Read our statement</li>
+            </ul>
+        </div>
+        <div class="grid-item">
+            <h2>Media</h2>
+            <ul>
+                <li>Wallpapers</li>
+                <li>Brochures</li>
+                <li>User guides</li>
+            </ul>
+        </div>
+        <div class="grid-item">
+            <h2>Official channels</h2>
+            <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/acoustic.sugar.9/" class="fa fa-facebook">  Facebook</a></li>
+                    <li><a href="https://www.instagram.com/acousticallysugar/" class="fa fa-instagram">  Instagram</a></li>
+                    <li><a href="https://www.facebook.com/acoustic.sugar.9/" class="fa fa-twitter">  Twitter</a></li>
+                    <li><a href="https://www.facebook.com/acoustic.sugar.9/" class="fa fa-youtube">  Youtube</a></li>
+                    <li><a href="https://www.facebook.com/acoustic.sugar.9/" class="fa fa-pinterest">  Pinterest</a></li>
+                    <li><a href="https://www.facebook.com/acoustic.sugar.9/" class="fa fa-linkedin">  LinkedIn</a></li>
+                    <li><a href="https://www.facebook.com/acoustic.sugar.9/" class="fa fa-wechat">  WeChat</a></li>
+                    <li><a href="https://www.facebook.com/acoustic.sugar.9/" class="fa fa-weibo">  Weibo</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<section class="copyright">
+    © 2021 Sephora USA, Inc. All rights reserved.
+    Privacy PolicyTerms of UseAccessibilitySitemap
+</section>
+   </body>
+ </html> 
