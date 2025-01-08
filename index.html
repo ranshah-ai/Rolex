@@ -11,169 +11,178 @@
 
 
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins',sans-serif;
-            text-decoration: none;
-            list-style: none;
-        }
-        video{
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            top: 0;
-            left: 0;
-            object-fit: cover;
-            z-index: -5;
-        }
-        .logo{
-            width: 120px;
-            height: 60px;
-            padding: 8px;
-            cursor: pointer;
-            transform: 0.4s ease;
-            margin-left: 9em;
-            
-        }
-        .logo:hover{
-            transform: scale(1.1);
-        }
-        header{
-            background-color: #00603a9e;
-            backdrop-filter: blur(20px);
-        }
-        .logo-menu{
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-        }
-        nav .logo-menu .menu{
-            display: flex;
-            align-items: center;
-            justify-content: left;
-            gap: 1em;
-            margin-left: -55em;
-            color: white;
-            cursor: pointer;
-        }
-        .menu a{
-            color: white;
-            font-size: 18px;
-            transition: 0.3s ease;
-        }
-        .menu a:hover{
-            color: #00cc7a9e;
-        }
-        #menu-icon{
-            color: white;
-            font-size: 24px;
-            margin-left: -90%;
-            transition: 0.3s ease;
-        }
-        #menu-icon:hover{
-            color: #00cc7a9e;
-        }
-        .search, .search a{
-            color: white;
-            font-size: 18px;
-            display: flex;
-            align-items: center;
-            gap: 0.5em;
-            transition: 0.3s ease;
-        }
-        .search:hover, .search a:hover{
-            color: #00cc7a9e;
-        }
-        /* .store, .store a{
-            color: white;
-            font-size: 18px;
-            display: flex;
-            align-items: center;
-            gap: 0.5em;
-            transition: 0.3s ease;
-        }
-        .store:hover, .store a:hover{
-            color: #00cc7a9e; */
-        /* } */
-        .favs, .favs a{
-            color: white;
-            font-size: 18px;
-            display: flex;
-            align-items: center;
-            gap: 0.5em;
-            transition: 0.3s ease;
-        }
-        .favs:hover, .favs a:hover{
-            color: #00cc7a9e;
-        }
-        nav{
-            padding: 2em 20em;
-            display: flex;
-            gap: 5em;
-            align-items: center;
-            justify-content: space-between;
-        }
-        nav ul{
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            gap: 5em;
-            margin-right: -19em;
-        }
-        .info{
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            justify-content: center;
-            margin-top: 18em;
-        }
-        .info h1{
-            font-size: 87px;
-            color: white;
-            
-        }
-        .info p{
-            color: white;
-            font-size: 38px;
-        }
-        .info button{
-            padding: 10px 30px;
-            border-radius: 100px;
-            color: white;
-            font-size: 24px;
-            border: none;
-            background-color: #00cc7a9e;
-            border: 2px solid #00603a9e;
-            transition: 0.3s ease;
-            opacity: 0.8;
-            margin-top: 1em;
-        }
-        info button:hover{
-            transform: translateY(-5px);
-            opacity: 1;
-        }
-        .sign-up, .sign-up a{
-            color: white;
-            font-size: 18px;
-            display: flex;
-            align-items: center;
-            gap: 0.5em;
-            transition: 0.3s ease;
-        }
-        .sign-up:hover, .sign-up a:hover{
-            color: #00cc7a9e;
-        }
-    /* text-align: center;
-    margin-bottom: 4vh;
-} */
- #share{
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+video {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -5;
+}
+
+.logo {
+    width: 120px;
+    height: 60px;
+    padding: 8px;
+    cursor: pointer;
+    transform: 0.4s ease;
+    margin-left: 9em;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+header {
+    background-color: #00603a9e;
+    backdrop-filter: blur(20px);
+}
+
+.logo-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+nav .logo-menu .menu {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 1em;
+    color: white;
+    cursor: pointer;
+}
+
+.menu a {
+    color: white;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.menu a:hover {
+    color: #00cc7a9e;
+}
+
+#menu-icon {
+    color: white;
+    font-size: 24px;
+    transition: 0.3s ease;
+}
+
+#menu-icon:hover {
+    color: #00cc7a9e;
+}
+
+.search, .search a {
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    transition: 0.3s ease;
+}
+
+.search:hover, .search a:hover {
+    color: #00cc7a9e;
+}
+
+.favs, .favs a {
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    transition: 0.3s ease;
+}
+
+.favs:hover, .favs a:hover {
+    color: #00cc7a9e;
+}
+
+nav {
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 18em;
+}
+
+.info h1 {
+    font-size: 87px;
+    color: white;
+    text-align: center;
+}
+
+.info p {
+    color: white;
+    font-size: 38px;
+    text-align: center;
+}
+
+.info button {
+    padding: 10px 30px;
+    border-radius: 100px;
+    color: white;
+    font-size: 24px;
+    border: none;
+    background-color: #00cc7a9e;
+    border: 2px solid #00603a9e;
+    transition: 0.3s ease;
+    opacity: 0.8;
+    margin-top: 1em;
+}
+
+.info button:hover {
+    transform: translateY(-5px);
+    opacity: 1;
+}
+
+.sign-up, .sign-up a {
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    transition: 0.3s ease;
+}
+
+.sign-up:hover, .sign-up a:hover {
+    color: #00cc7a9e;
+}
+
+#share {
     display: flex;
     margin: 40px 0;
     align-items: center;
- }
-.socialIcons a{
+}
+
+.socialIcons a {
     position: relative;
     list-style: none;
     text-align: center;
@@ -182,32 +191,25 @@
     text-decoration: none;
     background-color: #1e211d;
     color: #b6bbc5;
-    box-shadow:-3px -3px 7px #ffffff73,3px 3px 5px rgba(94, 104, 121, 0.288);
+    box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94, 104, 121, 0.288);
     border-radius: 50%;
     height: 70px;
     width: 70px;
     padding: .5vw;
     margin: 0 10px;
-    
 }
-.socialIcons a:hover{
+
+.socialIcons a:hover {
     color: whitesmoke;
     background-color: rgb(5, 52, 238);
     opacity: 100%;
 }
-/*
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
-    margin: 0;
-    padding: 20px;
-*/
 
 .menu-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
     gap: 35px;
     background-color: #cacad173;
-
 }
 
 .grid-item h2 {
@@ -219,7 +221,6 @@
 .grid-item ul {
     list-style-type: none;
     padding: 0;
-    
 }
 
 .grid-item ul li {
@@ -238,7 +239,6 @@
     margin-bottom: 50px;
     margin-left: -118px;
     margin-top: -70px;
-    
 }
 
 .social-icons {
@@ -256,70 +256,85 @@
 .social-icons li:hover {
     color: #000;
 }
-.copyright{
+
+.copyright {
     font-size: 2vw;
     background-color: #000;
     color: aliceblue;
 }
-/* Media Queries */
- @media (max-width: 1200px) { 
-    .logo {
-         margin-left: 5em;
-         } 
-    .nav { 
-        padding: 1em 5em; 
-    } 
-    .info h1 {
-         font-size: 60px; 
-        } 
-    .info p { 
-        font-size: 24px; 
-    }
- } 
-    @media (max-width: 768px) { 
-        .logo {
-             margin-left: 2em;
-             } 
-        .nav { 
-            padding: 1em 2em;
-         } 
-        .info h1 { 
-            font-size: 40px;
-         } 
-        .info p {
-             font-size: 18px;
-             }
-        .info button {
-             font-size: 20px;
-              padding: 8px 20px; 
-            } 
-    }
-     @media (max-width: 480px) { 
-        .logo { 
-             margin-left: 1em;
-             width: 100px;
-             height: 50px;
-             } 
-        .info {
-             margin-top: 10em; 
-            } 
-        .info h1 { 
-            font-size: 30px;
-         } 
-        .info p {
-             font-size: 16px; 
-            } 
-        .info button { 
-            font-size: 18px;
-            padding: 6px 15px;
-         } 
-        .socialIcons a {
-             height: 50px;
-             width: 50px; 
-             font-size: 20px; 
-            }
-     }
 
+/* Media Queries */
+@media (max-width: 1200px) {
+    .logo {
+        margin-left: 5em;
+    }
+
+    nav {
+        padding: 1em 5em;
+    }
+
+    .info h1 {
+        font-size: 60px;
+    }
+
+    .info p {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        margin-left: 2em;
+    }
+
+    nav {
+        padding: 1em 2em;
+    }
+
+    .info h1 {
+        font-size: 40px;
+    }
+
+    .info p {
+        font-size: 18px;
+    }
+
+    .info button {
+        font-size: 20px;
+        padding: 8px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        margin-left: 1em;
+        width: 100px;
+        height: 50px;
+    }
+
+    .info {
+        margin-top: 10em;
+    }
+
+    .info h1 {
+        font-size: 30px;
+    }
+
+    .info p {
+        font-size: 16px;
+    }
+
+    .info button {
+        font-size: 18px;
+        padding: 6px 15px;
+    }
+
+    .socialIcons a {
+        height: 50px;
+        width: 50px;
+        font-size: 20px;
+    }
+}
 
 
 
